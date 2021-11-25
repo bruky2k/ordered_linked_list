@@ -21,7 +21,6 @@ class QuickPushOrderedList extends ListNode {
         return this.deleteNode(this.head, largestVal);
     }
 
-
     push(val) {
         //allocate node
         const newNode = new ListNode(val);
@@ -49,11 +48,4 @@ class QuickPushOrderedList extends ListNode {
             curr = curr.next;
         }
     }
-
-    // printList(head) {
-    //     while (head != null) {
-    //         console.log(head.val + " ");
-    //         head = head.next;
-    //     }
-    // }
 }

@@ -13,7 +13,7 @@ class ListNode {
         if(head != null){
             let list = "";
             while (head != null) {
-                list += `${head.val}, `
+                list += `${head.val}, `;
                 head = head.next;
             }
             console.log(list);

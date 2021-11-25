@@ -1,46 +1,8 @@
-
-/*// Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
-    .container-fluid h1 {
-        color: green;
-    }
-}
-
-/*// Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {
-    .container-fluid h1{
-        color: yellow;
-    }
-}
-
-/*// Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-    .container-fluid h1{
-        color: red;
-    }
-}
-
-/*// X-Large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
-    .container-fluid h1{
-        color: green;
-    }
-}
-
-/*// XX-Large devices (larger desktops, 1400px and up)*/
-@media (min-width: 1400px) {
-    .container-fluid h1{
-        color: red;
-    }
-}
-
-/*style*/
 #resultOutput{
     width: 100%;
 }
 
 #resultOutput p{
-    /*padding: 40px;*/
     word-spacing: 30px;
     font-weight: bold;
 }
@@ -49,10 +11,7 @@ h1 {
     font-family: 'Fruktur', cursive;
 }
 
-/*
- * Header
- */
-
+/*Header*/
 .nav-masthead .nav-link {
     padding: .25rem 0;
     font-weight: 700;
@@ -75,17 +34,10 @@ h1 {
     border-bottom-color: #ee5e5e;
 }
 
-.error{
-    color: red;
-    font-size: 0.8rem;
+/*Footer*/
+footer .btn-outline-secondary{
+    font-size: 8px;
 }
 
-.valid-feedback{
-
-}
-
-.invalid-feedback{
-
-}
 
 

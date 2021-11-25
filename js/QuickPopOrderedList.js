@@ -1,8 +1,6 @@
 class QuickPopOrderedList extends ListNode {
     constructor(compareFunc) {
         super(null, null);
-
-        // this.head = null;
         this.compareFunc = compareFunc;
     }
 
@@ -39,14 +37,6 @@ class QuickPopOrderedList extends ListNode {
             current.next = newNode;
         }
     }
-
-    // //prints linked list to log
-    // printList(head) {
-    //     while (head != null) {
-    //         console.log(head.val + " ");
-    //         head = head.next;
-    //     }
-    // }
 
 }
 
