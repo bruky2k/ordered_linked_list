@@ -3,7 +3,7 @@ function testQuickPopOrderedList() {
     const array = createIntArr(100);
     //1
     console.log("Test push method: (Pushing the last item expected to be slower then firstItem)");
-    let pushRes =  getFirstAndLastItemPerformanceTime_pushMethod(array); //res { first: xx, last xx}
+    let pushRes =  getFirstAndLastItemPerformanceTime_pushMethod(array);
 
     console.log(pushRes.firstItem < pushRes.lastItem); //lastItem expected to be slower then firstItem (expected true)
 

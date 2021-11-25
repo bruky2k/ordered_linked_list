@@ -3,12 +3,10 @@ class ListNode {
         this.val = val;
         this.next = null;
 
-        //first node in list
         this.head = null;
         // this.compareFunc = compareFunc;
     }
 
-    //print linked list
     printList(head) {
         if(head != null){
             let list = "";

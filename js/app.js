@@ -5,7 +5,6 @@ let IS_QUICK_POP = true;
 // init ui class
 const ui = new UI();
 
-//For example -  UI that compare integers
 let quickPopList = new QuickPopOrderedList(Comparator.compareInt);
 let quickPushList = new QuickPushOrderedList(Comparator.compareInt);
 
@@ -60,10 +59,8 @@ function popAndDisplayItem(linkedList, sortedOrHead, msg) {
 function pushItem(e) {
     const inputElement = document.querySelector("#userInput");
     if (IS_QUICK_POP) {
-        // console.log("slow push");
         pushAndDisplayMsg(quickPopList, inputElement, "slow push");
     } else {
-        // console.log("quick push");
         pushAndDisplayMsg(quickPushList, inputElement, "quick push");
     }
 
@@ -71,11 +68,8 @@ function pushItem(e) {
     let outputElement = document.querySelector("#resultOutput p");
     outputElement ? outputElement.innerHTML = "" : "";
 
-    //easy for user
     inputElement.focus();
-    //enable pop btn
     ui.enableDisablePopButton(IS_QUICK_POP);
-    //disable push btn
     enableDisablePushButton(e);
 }
 
@@ -86,12 +80,10 @@ function pushAndDisplayMsg(linkedList, inputElement, msg) {
         ui.showFeedback(inputElement.value, msg);
         console.log(inputElement.value + ` ${msg}`);
 
-        //clear input's value after pushing
         inputElement.value = "";
     }
 }
 
-//on input change disable enable buttons
 function enableDisablePushButton(e) {
     ui.enableDisablePushBtnForEmptyInput(e)
 }
