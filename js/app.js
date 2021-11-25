@@ -1,3 +1,4 @@
+
 //VARIABLES
 let IS_QUICK_POP = true;
 
@@ -13,7 +14,7 @@ window.addEventListener("load", () => {
     ui.changeHeaderAndBtnLabel(true); // quick pop mode on start
 
     ui.navElem.addEventListener("click", (e) => {
-        IS_QUICK_POP = false;
+        IS_QUICK_POP = e.target.id.indexOf("quickPop") >= 0;
         ui.toggleNav(e);
     });
 
@@ -37,12 +38,12 @@ document.querySelector("#printListBtn").addEventListener("click", () => {
 function popItem(e) {
     if (IS_QUICK_POP) {
         // console.log("quick pop");
-        popAndDisplayItem(quickPopList, quickPopList.head, "quick popped");
+        popAndDisplayItem(quickPopList, quickPopList.head, "quick pop");
         //check if pop button needs to be disabled
         ui.enableDisablePopButton(true);
     } else {
         // console.log("slow pop");
-        popAndDisplayItem(quickPushList, quickPushList.head, "slow popped");
+        popAndDisplayItem(quickPushList, quickPushList.head, "slow pop");
         ui.enableDisablePopButton(false);
     }
 }
@@ -60,10 +61,10 @@ function pushItem(e) {
     const inputElement = document.querySelector("#userInput");
     if (IS_QUICK_POP) {
         // console.log("slow push");
-        pushAndDisplayMsg(quickPopList, inputElement, "slow pushed");
+        pushAndDisplayMsg(quickPopList, inputElement, "slow push");
     } else {
         // console.log("quick push");
-        pushAndDisplayMsg(quickPushList, inputElement, "quick pushed");
+        pushAndDisplayMsg(quickPushList, inputElement, "quick push");
     }
 
     //clear UI output on push -> updates the list
@@ -94,4 +95,3 @@ function pushAndDisplayMsg(linkedList, inputElement, msg) {
 function enableDisablePushButton(e) {
     ui.enableDisablePushBtnForEmptyInput(e)
 }
-

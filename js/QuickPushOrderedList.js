@@ -1,7 +1,7 @@
 class QuickPushOrderedList extends ListNode {
 
     constructor(compareFunc) {
-        super(null, null);
+        super(null);
 
         this.compareFunc = compareFunc;
     }

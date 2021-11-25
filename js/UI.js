@@ -12,7 +12,7 @@ class UI {
         if (e.target.classList.contains("nav-link")) {
             //remove prev active status
             this.navElem.querySelector("a.active").classList.remove("active");
-
+            console.log(e.target.id);
             if (e.target.id.indexOf("quickPop") !== -1) {
                 e.target.classList.add("active");
                 // IS_QUICK_POP = false;

@@ -8,7 +8,7 @@ class ListNode {
         // this.compareFunc = compareFunc;
     }
 
-    /* Function to print linked list */
+    //print linked list
     printList(head) {
         if(head != null){
             let list = "";

@@ -1,6 +1,6 @@
 class QuickPopOrderedList extends ListNode {
     constructor(compareFunc) {
-        super(null, null);
+        super(null);
         this.compareFunc = compareFunc;
     }
 
@@ -21,15 +21,13 @@ class QuickPopOrderedList extends ListNode {
     }
 
     compareAndInsert(newNode) {
-        //insert new node in already ordered list is maybe better...
          //in case we insert the head of list
         if (this.head == null || this.compareFunc(this.head.val, newNode.val) <= 0) { //when a<b or a=b
             newNode.next = this.head;
             this.head = newNode;
         } else {
             let current = this.head;
-            /* Locate the node before the point of insertion */
-            //
+            //The node should be placed before the point of insertion
             while (current.next != null && this.compareFunc(current.next.val, newNode.val) > 0) { // as long as a>b
                 current = current.next;
             }
